@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 
 const API = 'AIzaSyBJlzFGjZ3fx1_z4XJao9YbkVIDtQBcTA0'
+const channelID = 'UC8butISFwT-Wl7EV0hUK0BQ'
 // const channelID = ''
-const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
+// const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
 const result = 50;
 
+var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
 // var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key=${API}`
 
-var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${API}&Results=${result}&playlistId=${playlistId}`
+// var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${API}&Results=${result}&playlistId=${playlistId}`
 
 class Node extends Component {
 
