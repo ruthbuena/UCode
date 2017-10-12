@@ -1,0 +1,27 @@
+{
+  "name": "ucode",
+  "version": "1.0.0",
+  "description": "Application using React",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node scripts/start-client.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruthbuena/UCode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruthbuena/UCode/issues"
+  },
+  "homepage": "https://github.com/ruthbuena/UCode#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "react-router-dom": "^4.2.2"
+  }
+}
