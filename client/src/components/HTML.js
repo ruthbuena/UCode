@@ -16,18 +16,19 @@ class Youtube extends Component {
     };
     this.clicked = this.clicked.bind(this);
   }
-clicked(){
-  fetch(finalURL)
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson);
-        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
-        this.setState({resultyt});
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-}
+  
+  clicked(){
+    fetch(finalURL)
+        .then((response) => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
+          this.setState({resultyt});
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+  }
 
 
 
