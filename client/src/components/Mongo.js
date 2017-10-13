@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
 
 const API = 'AIzaSyBJlzFGjZ3fx1_z4XJao9YbkVIDtQBcTA0'
-const channelID = 'UC8butISFwT-Wl7EV0hUK0BQ'
-// const channelID = ''
-// const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
-const result = 15;
+const playlistId = 'PL6gx4Cwl9DGDQ5DrbIl20Zu9hx1IjeVhO'
+const result = 50;
 
-var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
-// var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key=${API}`
-
-// var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${API}&Results=${result}&playlistId=${playlistId}`
+var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlistId}&part=snippet,id&order=date&maxResults=${result}`
 
 class Mongo extends Component {
 
@@ -26,7 +21,7 @@ clicked(){
       .then((response) => response.json())
       .then((responseJson) => {
         // console.log(responseJson);
-        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
+        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
         this.setState({resultyt});
       })
       .catch((error) => {
@@ -42,7 +37,7 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get Mongo videos</button>
+        <button onClick={this.clicked}>Get MongoDB videos</button>
           {
             this.state.resultyt.map((link, i) => {
               console.log(link);

@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
 const API = 'AIzaSyBJlzFGjZ3fx1_z4XJao9YbkVIDtQBcTA0'
-const channelID = 'UCQPYJluYC_sn_Qz_XE-YbTQ'
-// const channelID = ''
-// const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
-const result = 15;
+// const channelID = 'UCQPYJluYC_sn_Qz_XE-YbTQ'
 
-var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
+const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
+const result = 50;
+
+var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlistId}&part=snippet,id&order=date&maxResults=${result}`
+// var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
 // var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key=${API}`
 
 // var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${API}&Results=${result}&playlistId=${playlistId}`
@@ -26,7 +27,7 @@ clicked(){
       .then((response) => response.json())
       .then((responseJson) => {
         // console.log(responseJson);
-        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
+        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
         this.setState({resultyt});
       })
       .catch((error) => {

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Node from './components/Node';
-import Express from './components/Express';
+import ES from './components/ES';
 import SQL from './components/SQL';
 import Mongo from './components/Mongo';
 
@@ -19,7 +19,7 @@ class App extends Component {
          Testing the UCode application - make updates <code>src/App.js</code> and save to reload.
         </p>
         <Node />
-        <Express />
+        <ES />
         <SQL />
         <Mongo />
 
