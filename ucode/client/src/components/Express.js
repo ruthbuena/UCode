@@ -11,7 +11,7 @@ var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelI
 
 // var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${API}&Results=${result}&playlistId=${playlistId}`
 
-class Node extends Component {
+class Express extends Component {
 
   constructor(props){
     super(props);
@@ -42,11 +42,11 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get Node videos</button>
+        <button onClick={this.clicked}>Get Express videos</button>
           {
             this.state.resultyt.map((link, i) => {
               console.log(link);
-              var frame = <div key={i} className="node"><iframe  title="Node" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
+              var frame = <div key={i} className="express"><iframe  title="Express" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
               return frame;
             })
           }
@@ -58,4 +58,4 @@ clicked(){
   }
 }
 
-export default Node;
+export default Express;
