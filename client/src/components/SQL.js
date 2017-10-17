@@ -37,7 +37,7 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get MySQL videos</button>
+        <button onClick={this.clicked}>MySQL</button>
           {
             this.state.resultyt.map((link, i) => {
               console.log(link);

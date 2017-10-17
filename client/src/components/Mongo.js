@@ -37,7 +37,7 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get MongoDB videos</button>
+        <button onClick={this.clicked}>MongoDB</button>
           {
             this.state.resultyt.map((link, i) => {
               console.log(link);

@@ -37,7 +37,7 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get ES6 videos</button>
+        <button onClick={this.clicked}>ES6</button>
           {
             this.state.resultyt.map((link, i) => {
               console.log(link);

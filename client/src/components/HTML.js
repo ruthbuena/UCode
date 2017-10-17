@@ -39,14 +39,15 @@ class Youtube extends Component {
     return(
       <div>
         <button onClick={this.clicked}>HTML</button>
-          {
-            this.state.resultyt.map((link, i) => {
-              console.log(link);
-              var frame = <div key={i} className="youtube"><iframe  width="300" height="200" src={link} frameBorder="0" allowFullScreen></iframe></div>
-              return frame;
-            })
-          }
-          {this.frame}
+          <div>
+            {
+              this.state.resultyt.map((link, i) => {
+                console.log(link);
+                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                return frame;
+              })
+            }
+          </div>
 
 
     </div>
