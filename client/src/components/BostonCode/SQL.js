@@ -37,18 +37,15 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>MySQL</button>
-          {
-            this.state.resultyt.map((link, i) => {
-              console.log(link);
-              var frame = <div key={i} className="sql"><iframe  title="SQL" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
-              return frame;
-            })
-          }
-          {this.frame}
-
-
-    </div>
+          <button onClick={this.clicked}>MySQL</button>
+            <div>
+              {this.state.resultyt.map((link, i) => {
+                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                return frame;
+                })
+              }
+            </div>
+        </div>
     );
   }
 }

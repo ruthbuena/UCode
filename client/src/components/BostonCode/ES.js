@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
 const API = 'AIzaSyBJlzFGjZ3fx1_z4XJao9YbkVIDtQBcTA0'
-const playlistId = 'PL6gx4Cwl9DGDQ5DrbIl20Zu9hx1IjeVhO'
+const playlistId = 'PL6gx4Cwl9DGBhgcpA8eTYYWg7im72LgLt'
 const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlistId}&part=snippet,id&order=date&maxResults=${result}`
 
-class Mongo extends Component {
+class ES extends Component {
 
   constructor(props){
     super(props);
@@ -37,20 +37,17 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>MongoDB</button>
-          {
-            this.state.resultyt.map((link, i) => {
-              console.log(link);
-              var frame = <div key={i} className="mongo"><iframe  title="Mongo" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
-              return frame;
-            })
-          }
-          {this.frame}
-
-
-    </div>
+          <button onClick={this.clicked}>ES6</button>
+            <div>
+              {this.state.resultyt.map((link, i) => {
+                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                return frame;
+                })
+              }
+            </div>
+        </div>
     );
   }
 }
 
-export default Mongo;
+export default ES;

@@ -6,7 +6,7 @@ const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlist}&part=snippet,id&order=date&maxResults=${result}`
 
-class Youtube extends Component {
+class ReactJs extends Component {
 
   constructor(props){
     super(props);
@@ -37,20 +37,17 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>React</button>
-          {
-            this.state.resultyt.map((link, i) => {
-              console.log(link);
-              var frame = <div key={i} className="youtube"><iframe  width="300" height="200" src={link} frameBorder="0" allowFullScreen></iframe></div>
-              return frame;
-            })
-          }
-          {this.frame}
-
-
-    </div>
+          <button onClick={this.clicked}>React</button>
+            <div>
+              {this.state.resultyt.map((link, i) => {
+                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                return frame;
+                })
+              }
+            </div>
+        </div>
     );
   }
 }
 
-export default Youtube;
+export default ReactJs;
