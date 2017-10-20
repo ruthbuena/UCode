@@ -1,16 +1,20 @@
 
-import React, { Component } from 'react';
+import React from 'react';
+import Cards from './components/ChannelsM';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Channels from './components/Channels';
 import BostonCode from './components/BostonCode/BostonCode';
+import Header from './components/Header';
 
 const App = () =>
-  <Router>
+
+<Router>
     <div>
-      <Channels />
-      <Route exact path="/BostonCode" component={BostonCode} />
+      <Header />
+      <Cards />
+      <Route path="/BostonCode" component={BostonCode} />
     </div>
-  </Router>;
+</Router>;
+
 
 export default App;

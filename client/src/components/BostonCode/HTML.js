@@ -6,7 +6,7 @@ const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlist}&part=snippet,id&order=date&maxResults=${result}`
 
-class Youtube extends Component {
+class HTML extends Component {
 
   constructor(props){
     super(props);
@@ -55,4 +55,4 @@ class Youtube extends Component {
   }
 }
 
-export default Youtube;
+export default HTML;

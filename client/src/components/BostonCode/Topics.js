@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 import Navpills from './Nav';
 import HTML from './HTML';
@@ -13,20 +13,19 @@ import ES from './ES';
 
 
 
-
 const Topics = () =>
-  <Router>
+  <Switch>
     <div>
       <Navpills />
-      <Route exact path="/" component={HTML} />
-      <Route exact path="/CSS" component={CSS} />
-      <Route exact path="/Javascript" component={JavaScript} />
-      <Route exact path="/ReactJs" component={ReactJs} />
-      <Route exact path="/Node" component={Node} />
-      <Route exact path="/SQL" component={SQL} />
-      <Route exact path="/Mongo" component={Mongo} />
-      <Route exact path="/ES" component={ES} />
+      <Route path="/HTML" component={HTML} />
+      <Route path="/CSS" component={CSS} />
+      <Route path="/Javascript" component={JavaScript} />
+      <Route path="/ReactJs" component={ReactJs} />
+      <Route path="/Node" component={Node} />
+      <Route path="/SQL" component={SQL} />
+      <Route path="/Mongo" component={Mongo} />
+      <Route path="/ES" component={ES} />
     </div>
-  </Router>;
+  </Switch>;
 
 export default Topics;
