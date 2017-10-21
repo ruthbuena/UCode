@@ -1,17 +1,26 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {Navbar, NavItem} from 'react-materialize';
 
-const Navpills = () =>
+const Navpills = (props) =>
 
-  <Navbar>
-    <NavItem href='HTML'>HTML</NavItem>
-    <NavItem href='CSS'>CSS</NavItem>
-    <NavItem href='Javascript'>JavaScript</NavItem>
-    <NavItem href='React'>React</NavItem>
-    <NavItem href='Node'>Node</NavItem>
-    <NavItem href='SQL'>MySQL</NavItem>
-    <NavItem href='Mongo'>Mongo</NavItem>
-    <NavItem href='ES'>ES6</NavItem>
+  <Navbar className='blue-grey darken-1'>
+    <NavItem><Link to={'HTML'}>HTML</Link>
+    </NavItem>
+    <NavItem><Link to={'CSS'}>CSS</Link>
+    </NavItem>
+    <NavItem><Link to={'Javascript'}>JavaScript</Link>
+    </NavItem>
+    <NavItem><Link to={'React'}>React</Link>
+    </NavItem>
+    <NavItem><Link to={'Node'}>Node</Link>
+    </NavItem>
+    <NavItem><Link to={'SQL'}>MySQL</Link>
+    </NavItem>
+    <NavItem><Link to={'Mongo'}>Mongo</Link>
+    </NavItem>
+    <NavItem><Link to={'ES'}>ES6</Link>
+    </NavItem>
   </Navbar>
 
 export default Navpills;

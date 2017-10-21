@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {Button} from 'react-materialize';
+import '../TopicComponent.css';
+
 
 const API = 'AIzaSyCjtaaj2Rb2BcH3MA1HqqadBTSWoQ3wHKY'
 const playlist = 'PL081AC329706B2953'
@@ -38,15 +41,16 @@ class HTML extends Component {
 
     return(
       <div>
-        <button onClick={this.clicked}>HTML</button>
-          <div>
+        <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+          <div className='video_container'>
+            
             {
               this.state.resultyt.map((link, i) => {
                 console.log(link);
-                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                var frame = <iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
                 return frame;
               })
-            }
+            } 
           </div>
 
 
