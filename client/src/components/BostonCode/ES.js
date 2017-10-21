@@ -37,18 +37,15 @@ clicked(){
 
     return(
       <div>
-        <button onClick={this.clicked}>Get ES6 videos</button>
-          {
-            this.state.resultyt.map((link, i) => {
-              console.log(link);
-              var frame = <div key={i} className="es"><iframe  title="ES" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
-              return frame;
-            })
-          }
-          {this.frame}
-
-
-    </div>
+          <button onClick={this.clicked}>ES6</button>
+            <div>
+              {this.state.resultyt.map((link, i) => {
+                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                return frame;
+                })
+              }
+            </div>
+        </div>
     );
   }
 }
