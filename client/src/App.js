@@ -1,19 +1,18 @@
 
 import React from 'react';
-import Cards from './components/ChannelsM';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import BostonCode from './components/BostonCode/BostonCode';
-import Header from './components/Header';
+import Home from './components/Home';
+
 
 const App = () =>
 
 <Router>
-    <div>
-      <Header />
-      <Cards />
-      <Route path="/BostonCode" component={BostonCode} />
-    </div>
+	<Switch>
+	  <Route exact path="/" component = {Home} />
+      <Route exact path="/BostonCode" component= {BostonCode} />
+    </Switch>
 </Router>;
 
 

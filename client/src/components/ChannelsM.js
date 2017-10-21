@@ -1,5 +1,6 @@
 import React from 'react';
 import {Col, Card, Row, Button} from 'react-materialize';
+import { Link } from 'react-router-dom';
 import './ChannelsM.css';
 
 const Cards = () =>
@@ -8,7 +9,7 @@ const Cards = () =>
     <Col s={3}>
         <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='thenewboston'>
         Find all the help you need!
-        <p><Button node='a' href='BostonCode'>Open Channel</Button></p>
+        <p><Button><Link to={'BostonCode'}>Open Channel</Link></Button></p>
         </Card>
     </Col>
     <Col s={3}>
