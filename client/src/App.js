@@ -1,41 +1,19 @@
 
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HTML from './components/HTML';
-import CSS from './components/CSS';
-import JavaScript from './components/Javascript';
-import ReactJs from './components/ReactJs';
-
-import Node from './components/Node';
-import ES from './components/ES';
-import SQL from './components/SQL';
-import Mongo from './components/Mongo';
+import BostonCode from './components/BostonCode/BostonCode';
+import Home from './components/Home';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-      <header className="App-header">
-         <img src={logo} className="App-logo" alt="logo" />
-         <h1 className="App-title">Welcome to UCode</h1>
-       </header>
-       <p className="App-intro">
-         Testing the UCode application - make updates <code>src/App.js</code> and save to reload.
-        </p>
-        <HTML />
-        <CSS />
-        <JavaScript />
-        <ReactJs />
-        <Node />
-        <ES />
-        <SQL />
-        <Mongo />
-      </div>
-    );
-  }
-}
+const App = () =>
+
+<Router>
+	<Switch>
+	  <Route exact path="/" component = {Home} />
+      <Route exact path="/BostonCode" component= {BostonCode} />
+    </Switch>
+</Router>;
+
 
 export default App;
