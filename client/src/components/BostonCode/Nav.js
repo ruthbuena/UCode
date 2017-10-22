@@ -11,7 +11,7 @@ const Navpills = (props) =>
     </NavItem>
     <NavItem><Link to={'Javascript'}>JavaScript</Link>
     </NavItem>
-    <NavItem><Link to={'React'}>React</Link>
+    <NavItem><Link to={'ReactJs'}>React</Link>
     </NavItem>
     <NavItem><Link to={'Node'}>Node</Link>
     </NavItem>
@@ -24,8 +24,3 @@ const Navpills = (props) =>
   </Navbar>
 
 export default Navpills;
-        
-        
-        
-        
-        
