@@ -8,7 +8,7 @@ const Cards = () =>
   <Row>
     <Col s={3}>
         <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='thenewboston'>
-        Find all the help you need!
+        Tons of sweet computer related tutorials and some other awesome videos too!
         <p><Button><Link to={'BostonCode'}>Open Channel</Link></Button></p>
         </Card>
     </Col>

@@ -21,6 +21,12 @@ const Navpills = (props) =>
     </NavItem>
     <NavItem><Link to={'ES'}>ES6</Link>
     </NavItem>
+    <NavItem><Link to={'Redux'}>Redux</Link>
+    </NavItem>
+    <NavItem><Link to={'Git'}>Git</Link>
+    </NavItem>
+    <NavItem><Link to={'Ajax'}>Ajax</Link>
+    </NavItem>
   </Navbar>
 
 export default Navpills;

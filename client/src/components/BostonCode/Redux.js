@@ -4,12 +4,12 @@ import '../TopicComponent.css';
 
 
 const API = 'AIzaSyCjtaaj2Rb2BcH3MA1HqqadBTSWoQ3wHKY'
-const playlist = 'PL081AC329706B2953'
+const playlist = 'PL6gx4Cwl9DGBbSLZjvleMwldX8jGgXV6a'
 const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlist}&part=snippet,id&order=date&maxResults=${result}`
 
-class HTML extends Component {
+class Redux extends Component {
 
   constructor(props){
     super(props);
@@ -59,4 +59,4 @@ class HTML extends Component {
   }
 }
 
-export default HTML;
+export default Redux;
