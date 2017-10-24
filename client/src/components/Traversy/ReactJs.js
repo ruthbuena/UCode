@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {Button} from 'react-materialize';
+import '../TopicComponent.css';
 
 const API = 'AIzaSyCjtaaj2Rb2BcH3MA1HqqadBTSWoQ3wHKY'
-const playlist = 'PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA'
+const playlist = 'PLillGF-RfqbbKWfm3Y_RF57dNGsHnkYqO'
 const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlist}&part=snippet,id&order=date&maxResults=${result}`
@@ -37,15 +39,20 @@ clicked(){
 
     return(
       <div>
-          <button onClick={this.clicked}>Display Videos Below</button>
-            <div>
-              {this.state.resultyt.map((link, i) => {
-                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+        <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+          <div className='video_container'>
+            
+            {
+              this.state.resultyt.map((link, i) => {
+                console.log(link);
+                var frame = <div className='ind_video'><iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe></div>
                 return frame;
-                })
-              }
-            </div>
-        </div>
+              })
+            } 
+          </div>
+
+
+    </div>
     );
   }
 }

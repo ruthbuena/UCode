@@ -25,31 +25,30 @@ const Cards = () =>
         </Card>
     </Col>
     <Col s={3}>
-        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BostonCode'>
-        Find all the help you need!
+        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='Traversy Media'>
+        Including, but not limited to: HTML, CSS, JavaScript, Bootstrap, Node.js, Express, API, and ES6.
+        <p><Button><Link to={'Traversy'}>Open Channel</Link></Button></p>
         </Card>
     </Col>
   </Row>
 
   <Row>
-    <Col s={3}>
-        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BostonCode'>
-        Find all the help you need!
+    <Col s={4}>
+        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='DerekBanas'>
+        Including, but not limited to: HTML, CSS, JavaScript, JQuery, Node.js, Git, Ajax, Object Oriented Design, and Mongo.
+        <p><Button><Link to={'DerekBanas'}>Open Channel</Link></Button></p>
         </Card>
     </Col>
-    <Col s={3}>
-        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BostonCode'>
-        Find all the help you need!
+    <Col s={4}>
+        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='MyCodeSchool'>
+        Presents some core concepts of computer programming: Sorting, Binary Search, Math for Programmers, Recursion, Data Structures, and Time Complexity.
+        <p><Button><Link to={'MyCodeSchool'}>Open Channel</Link></Button></p>
         </Card>
     </Col>
-    <Col s={3}>
-        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BostonCode'>
-        Find all the help you need!
-        </Card>
-    </Col>
-    <Col s={3}>
-        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BostonCode'>
-        Find all the help you need!
+    <Col s={4}>
+        <Card className='blue-grey darken-1 channel_card' textClassName='white-text' title='BradHussey'>
+        Including, but not limited to: HTML, CSS, Sass, Bootstrap 4, Web Hosting, and JQuery.
+        <p><Button><Link to={'BradHussey'}>Open Channel</Link></Button></p>
         </Card>
     </Col>
   </Row>

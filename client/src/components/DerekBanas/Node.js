@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {Button} from 'react-materialize';
+import '../TopicComponent.css';
 
 const API = 'AIzaSyBJlzFGjZ3fx1_z4XJao9YbkVIDtQBcTA0'
-const playlistId = 'PL6gx4Cwl9DGBMdkKFn3HasZnnAqVjzHn_'
+const playlistId = 'PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD'
 const result = 50;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&playlistId=${playlistId}&part=snippet,id&order=date&maxResults=${result}`
@@ -29,22 +31,28 @@ class Node extends Component {
           });
     }
 
-    render(){
-      
+  render(){
+      // console.log(finalURL);
+      console.log(this.state.resultyt);
+
       return(
         <div>
-          <button onClick={this.clicked}>Display Videos Below</button>
-            <div>
-              {this.state.resultyt.map((link, i) => {
-                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
-                return frame;
+          <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+            <div className='video_container'>
+              
+              {
+                this.state.resultyt.map((link, i) => {
+                  console.log(link);
+                  var frame = <div className='ind_video'><iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe></div>
+                  return frame;
                 })
-              }
+              } 
             </div>
-        </div>
+
+
+      </div>
       );
     }
-
-}
+  }
 
 export default Node;
