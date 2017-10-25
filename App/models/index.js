@@ -5,7 +5,10 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var env = process.env.NODE_ENV || "development";
 var config = require(path.join(__dirname, '..', '..', 'config', 'config.json'))[env];
-var sequelize = new Sequelize(config.database, config.username, config.password, config, {operatorAliases: false,});
+var Op = Sequelize.Op;
+var sequelize = new Sequelize(config.database, config.username, config.password, {
+  dialect: 'mysql',
+  operatorsAliases: false});
 var db = {};
 
 
