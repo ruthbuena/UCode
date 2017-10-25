@@ -30,7 +30,7 @@ class App extends React.Component {
       <Route exact path="/DataStructures" component={MyCodeSchool} />
       <Route exact path="/Bootstrap" component={BradHussey} />
     </Switch>
-</Router>;
+</Router>
         )
 
     }
