@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "node scripts/start-client.js",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "bundle": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,24 @@
   },
   "homepage": "https://github.com/ruthbuena/UCode#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react-router-dom": "^4.2.2",
-    "sequelize": "^4.13.10"
+    "sequelize": "^4.15.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1"
   }
 }

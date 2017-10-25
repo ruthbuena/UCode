@@ -1,11 +1,13 @@
 import React from 'react';
 import Cards from './ChannelsM';
+
 import Header from './Header';
 import Footer from './Footer';
+
 const Home = () =>
 
 	<div>
-		<Header />
+    <Header />
 		<Cards />
 		<Footer />
 	</div>

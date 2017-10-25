@@ -1,5 +1,7 @@
 import React from 'react';
-import {Col, Row, Navbar} from 'react-materialize';
+import {Col, Row, Navbar, NavItem} from 'react-materialize';
+//import { Register } from 'signup';
+//import { Login } from 'login';
 
 const Header = () => 
 
