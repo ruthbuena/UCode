@@ -5,7 +5,7 @@ import {Navbar, NavItem} from 'react-materialize';
 const Navpills = (props) =>
 
   <Navbar className='blue-grey darken-1'>
-    <NavItem><Link to={'HTML'}>HTML</Link>
+    <NavItem><Link to={'HTML_Boston'}>HTML</Link>
     </NavItem>
     <NavItem><Link to={'CSS'}>CSS</Link>
     </NavItem>
@@ -20,6 +20,12 @@ const Navpills = (props) =>
     <NavItem><Link to={'Mongo'}>Mongo</Link>
     </NavItem>
     <NavItem><Link to={'ES'}>ES6</Link>
+    </NavItem>
+    <NavItem><Link to={'Redux'}>Redux</Link>
+    </NavItem>
+    <NavItem><Link to={'Git'}>Git</Link>
+    </NavItem>
+    <NavItem><Link to={'Ajax'}>Ajax</Link>
     </NavItem>
   </Navbar>
 
