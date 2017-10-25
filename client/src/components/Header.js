@@ -8,10 +8,7 @@ const Header = () =>
 <div>
   <Row>
     <Col s={12}>
-      <Navbar className='blue-grey darken-1' brand='UCode' right>
-        <NavItem href='/login'>Log in</NavItem>
-        <NavItem href='/signup'>Sign up</NavItem>
-      </Navbar>
+      <Navbar className='blue-grey darken-1' brand='UCode' right></Navbar>
     </Col>
   </Row>
 </div>

@@ -18,6 +18,7 @@ class HTML extends Component {
       resultyt: []
     };
     this.clicked = this.clicked.bind(this);
+    this.clicked();
   }
   
   clicked(){
@@ -41,13 +42,12 @@ class HTML extends Component {
 
     return(
       <div>
-        <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
           <div className='video_container'>
             
             {
               this.state.resultyt.map((link, i) => {
                 console.log(link);
-                var frame = <iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+                var frame = <div className='ind_video'><iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe></div>
                 return frame;
               })
             } 
