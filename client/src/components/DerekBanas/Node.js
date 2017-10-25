@@ -10,26 +10,29 @@ var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&p
 
 class Node extends Component {
 
-    constructor(props){
-        super(props);
+   constructor(props){
+    super(props);
 
-        this.state = {
-          resultyt: []
-        };
-        this.clicked = this.clicked.bind(this);
-    }
+    this.state = {
+      resultyt: []
+    };
+    this.clicked = this.clicked.bind(this);
+    this.clicked();
+  }
+clicked(){
+  fetch(finalURL)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        // console.log(responseJson);
+        const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
+        this.setState({resultyt});
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+}
 
-    clicked(){
 
-      fetch(finalURL)
-          .then((response) => response.json())
-          .then((responseJson) => {
-            const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.snippet.resourceId.videoId);
-            this.setState({resultyt});
-          })
-          .catch((error) => {
-          });
-    }
 
   render(){
       // console.log(finalURL);
@@ -37,7 +40,7 @@ class Node extends Component {
 
       return(
         <div>
-          <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+
             <div className='video_container'>
               
               {

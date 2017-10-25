@@ -18,7 +18,7 @@ const Topics = () =>
   <Switch>
     <div>
       <Navpills />
-      <Route exact path="/HTML" component={HTML} />
+      <Route exact path="/HTML_Traversy" component={HTML} />
       <Route exact path="/Bootstrap" component={Bootstrap} />
       <Route exact path="/JQuery" component={JQuery} />
       <Route exact path="/Javascript" component={JavaScript} />

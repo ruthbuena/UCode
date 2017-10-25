@@ -5,7 +5,7 @@ import {Navbar, NavItem} from 'react-materialize';
 const Navpills = (props) =>
 
   <Navbar className='blue-grey darken-1'>
-    <NavItem><Link to={'HTML'}>HTML</Link>
+    <NavItem><Link to={'HTML_Derek'}>HTML</Link>
     </NavItem>
     <NavItem><Link to={'CSS'}>CSS</Link>
     </NavItem>

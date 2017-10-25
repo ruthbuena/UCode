@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Button} from 'react-materialize';
+import '../TopicComponent.css';
 
 const API = 'AIzaSyCjtaaj2Rb2BcH3MA1HqqadBTSWoQ3wHKY'
 const playlist = 'PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA'
@@ -15,7 +17,9 @@ class ReactJs extends Component {
       resultyt: []
     };
     this.clicked = this.clicked.bind(this);
+    this.clicked();
   }
+
 clicked(){
   fetch(finalURL)
       .then((response) => response.json())
@@ -37,15 +41,20 @@ clicked(){
 
     return(
       <div>
-          <button onClick={this.clicked}>Display Videos Below</button>
-            <div>
-              {this.state.resultyt.map((link, i) => {
-                var frame = <iframe style={{padding: 10}} key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe>
+
+          <div className='video_container'>
+            
+            {
+              this.state.resultyt.map((link, i) => {
+                console.log(link);
+                var frame = <div className='ind_video'><iframe key={i}  title="Node" src={link} frameBorder="0" allowFullScreen></iframe></div>
                 return frame;
-                })
-              }
-            </div>
-        </div>
+              })
+            } 
+          </div>
+
+
+    </div>
     );
   }
 }

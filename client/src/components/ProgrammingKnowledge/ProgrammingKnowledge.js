@@ -1,8 +1,8 @@
 import React from 'react';
 import Topics from './Topics';
 
-const LearnCode = () =>
+const ProgrammingKnowledge = () =>
     <div>
       <Topics />
     </div>
-export default LearnCode;
+export default ProgrammingKnowledge;

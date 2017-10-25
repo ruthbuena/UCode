@@ -5,7 +5,7 @@ import './TraversyNav.css';
 const Navpills = (props) =>
 
   <Navbar className='blue-grey darken-1'>
-    <NavItem><Link to={'HTML'} className='link'>HTML & CSS</Link>
+    <NavItem><Link to={'HTML_Traversy'} className='link'>HTML & CSS</Link>
     </NavItem>
     <NavItem><Link to={'JQuery'} className='link'>JQuery</Link>
     </NavItem>

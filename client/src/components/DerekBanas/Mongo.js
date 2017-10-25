@@ -10,13 +10,14 @@ var finalURL = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API}&p
 
 class Mongo extends Component {
 
-  constructor(props){
+ constructor(props){
     super(props);
 
     this.state = {
       resultyt: []
     };
     this.clicked = this.clicked.bind(this);
+    this.clicked();
   }
 clicked(){
   fetch(finalURL)
@@ -39,7 +40,7 @@ clicked(){
 
       return(
         <div>
-          <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+
             <div className='video_container'>
               
               {

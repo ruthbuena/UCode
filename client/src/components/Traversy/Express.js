@@ -17,6 +17,7 @@ class Express extends Component {
       resultyt: []
     };
     this.clicked = this.clicked.bind(this);
+    this.clicked();
   }
 clicked(){
   fetch(finalURL)
@@ -39,7 +40,7 @@ clicked(){
 
       return(
         <div>
-          <Button className='display_button' onClick={this.clicked}>Display videos below</Button>
+
             <div className='video_container'>
               
               {

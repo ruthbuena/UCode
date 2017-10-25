@@ -16,7 +16,7 @@ const Topics = () =>
       <Navpills />
       <Route exact path="/Bootstrap" component={Bootstrap} />
       <Route exact path="/CSS" component={CSS} />
-      <Route exact path="/HTML" component={HTML} />
+      <Route exact path="/HTML_Programming" component={HTML} />
       <Route exact path="/Javascript" component={Javascript} />
       <Route exact path="/Node" component={Node} />
       <Route exact path="/SQL" component={SQL} />
