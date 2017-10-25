@@ -14,11 +14,8 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "ybyuz5dhed9j9q0h",
-    "password": "rjb2bkid2skhuopz",
-    "database": "jezqsafkyhyrlt8x",
-    "host": "lmag6s0zwmcswp5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
+    "use_env_variable": "JAWSDB_URL",
     "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
   }
 }
