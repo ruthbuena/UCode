@@ -7,7 +7,7 @@ const Header = () =>
 <div>
   <Row>
     <Col s={12}>
-      <Navbar className='blue-grey darken-1' brand='UCode' right>
+      <Navbar className='blue-grey darken-1' brand='UCode App' right>
       <Button>Log Out</Button>
       </Navbar>
     </Col>
