@@ -37,8 +37,8 @@ class Register extends React.Component {
             this.setState({
                 signupFail: false
             });
+            this.props.history.push( '/login' );
             this.props.onSuccess(response.email);
-            this.props.history.push('/welcome');
         }).catch(response => {
             this.setState({
                signupFail: true

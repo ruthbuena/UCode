@@ -1,11 +1,13 @@
 import React from 'react';
-import Cards from './ChannelsM';
+import Welcome from './welcome';
 
 
 const Home = () =>
 
 	<div>
-		<Cards />
+		<mainHeader />
+		<Welcome />
+
 	</div>
 
 export default Home;
