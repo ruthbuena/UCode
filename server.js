@@ -36,7 +36,7 @@ app.engine('html', exphbs({
 app.set('view engine', '.html');
 
 //Models
-const models = require("./app/models");
+const models = require("./App/models");
 
 
 app.get('/', function(req, res) {
