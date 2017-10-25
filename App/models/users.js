@@ -1,5 +1,6 @@
+
 module.exports = function(sequelize, Sequelize) {
-    var User = sequelize.define('user', {
+   const User = sequelize.define('users', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -28,6 +29,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
             allowNull: false
         }
+
 
     });
     return User;

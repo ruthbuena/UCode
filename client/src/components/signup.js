@@ -1,54 +1,98 @@
-import React, { Component } from "react";
+import React from "react";
 import { Row, Input, Button} from 'react-materialize';
+import axios from 'axios';
 
-class Register extends Component {
+class Register extends React.Component {
 
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             firstName: '',
             lastName: '',
             email: '',
             password: '',
+            //signupFail: false
 
         }
     }
 
-    signUp() {
+    onChange = (e) => {
+        e.preventDefault();
+        const state = this.state;
+        state[e.target.name] = e.target.value;
+        this.setState(state);
+    };
+
+
+
+    SignUp = () => {
+        const {firstname, lastname, email, password} = this.state;
+
+        axios.post('/signup', {
+            firstname,
+            lastname,
+            email,
+            password
+        }).then(response => {
+            this.setState({
+                signupFail: false
+            });
+            this.props.onSuccess(response.email);
+            this.props.history.push('/welcome');
+        }).catch(response => {
+            this.setState({
+               signupFail: true
+            })
+        })
+    };
+
+    /*signUp() {
         console.log('this.state', this.state);
     }
-
+*/
     render() {
+
         return (
             <div>
                 <Row className='container'>
                     <Input
                         label="First Name" s={6}
-                        onChange={event => this.setState({firstName: event.target.value})}
+                        type="text"
+                        name="firstname"
+                        value={this.state.firstname}
+                        onChange={this.onChange}
 
                     />
 
                     <Input
                         label="Last Name" s={6}
-                        onChange={event => this.setState({lastName: event.target.value})}
-
+                        type="text"
+                        name="lastname"
+                        value={this.state.lastname}
+                        onChange={this.onChange}
                     />
 
                     <Input
                         type="email"
                         label="Email" s={6}
-                        onChange={event => this.setState({email: event.target.value})}
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.onChange}
                     />
+
                     <Input
                         type="password"
-                        label="password" s={6}
-                        onChange={event => this.setState({password: event.target.value})}
+                        label="password"
+                        name ="password"
+                        value={this.state.password}
+                        s={6}
+                        onChange={this.onChange}
                     />
-                    <Button
-                        waves='light'
-                        onClick={() => {
-                            this.signUp();
-                        }}>Submit
+                    <Button waves='light'
+                            onClick={() => {
+                                this.SignUp()
+                            }}>
+                        Submit
                     </Button>
 
                 </Row>
@@ -56,6 +100,6 @@ class Register extends Component {
 
         )
     }
-};
+}
 
 export default Register;

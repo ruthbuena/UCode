@@ -1,10 +1,18 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+const
+    express = require('express'),
+    app = express(),
+    bodyParser = require('body-parser'),
+    passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy,
+    env = require('dotenv').load(),
+    path = require('path'),
+    exphbs = require('express-handlebars')
 
-var app = express();
-var PORT = process.env.PORT || 8080;
 
-var db = require("./models");
+
+
+const PORT = process.env.PORT || 3001;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,9 +22,49 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("client/build"));
 
+app.use(express.static(path.join(__dirname, 'public')));
 
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
+//For Handlebars
+app.set('views', './app/views')
+app.engine('html', exphbs({
+    extname: '.html'
+}));
+app.set('view engine', '.html');
+
+//Models
+const models = require("./app/models");
+
+
+app.get('/', function(req, res) {
+    res.redirect('/login')
+});
+
+app.post('/signup', passport.authenticate('local-signup'), function(req, res) {
+    res.send(req.body);
+});
+
+app.post('/login', passport.authenticate('local-signin'), function(req, res) {
+    res.send(req.body);
+});
+
+
+require('./app/config/passport/passport.js')(passport,models.users);
+
+
+//Sync Database
+models.sequelize.sync().then(function(){
+    console.log('Nice! Database looks fine')
+
+}).catch(function(err){
+    console.log(err,"Something went wrong with the Database Update!")
+});
+
+
+
+    app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-});
