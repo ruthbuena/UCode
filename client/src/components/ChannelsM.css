@@ -3,5 +3,10 @@
 }
 
 .channel_card {
-  height: 15em;
+  height: 20em;
+  width: 18em;
+}
+
+.channel_btn {
+	background: white;
 }

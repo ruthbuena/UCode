@@ -26,6 +26,11 @@
   padding: 0;
 }
 
+footer.page-footer.example.blue-grey.darken-1 {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

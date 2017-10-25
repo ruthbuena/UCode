@@ -1,14 +1,21 @@
 iframe {
-  padding: 10px;
-  margin: 10px;
-  width: 20em;
+	box-shadow: 10px 10px 10px #3c525d;
+	height: 13em;
 }
 
 .display_button{
-  margin-left: 51.5em;
+  width: 100%;
+  height: 4em;
 }
 
 .video_container{
-  padding-left: 10em;
-  padding-right: 10em;
+  width: 100%;
+  padding: 20px 3em 20px 7em;
+}
+
+.ind_video {
+	float: left;
+	margin: 25px;
+	
+
 }
