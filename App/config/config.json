@@ -16,7 +16,6 @@
   },
   "production": {
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL",
-    "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+    "use_env_variable": "JAWSDB_URL"
   }
 }

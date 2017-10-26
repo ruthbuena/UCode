@@ -4,7 +4,8 @@
     "password": "",
     "database": "UcodeUsers",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "use_env_variable":"JAWSDB_URL"
   },
   "test": {
     "username": "root",
@@ -15,7 +16,6 @@
   },
   "production": {
     "dialect": "mysql",
-    "use_env_variable": "JAWSDB_URL",
-    "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+    "use_env_variable": "JAWSDB_URL"
   }
 }
