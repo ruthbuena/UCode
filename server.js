@@ -36,7 +36,7 @@ app.engine('html', exphbs({
 app.set('view engine', '.html');
 
 //Models
-const models = require("./app/models");
+const models = require("./App/models");
 
 
 app.get('/', function(req, res) {
@@ -52,7 +52,7 @@ app.post('/login', passport.authenticate('local-signin'), function(req, res) {
 });
 
 
-require('./app/config/passport/passport.js')(passport,models.users);
+require('./App/config/passport/passport.js')(passport,models.users);
 
 
 //Sync Database
