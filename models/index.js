@@ -4,8 +4,8 @@
 
 var fs        = require('fs');
 var path      = require('path');
-var Op = Sequelize.Op;
 var Sequelize = require('sequelize');
+var Op = Sequelize.Op;
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
@@ -16,7 +16,7 @@ if (config.use_env_variable) {
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, {
     dialect: 'mysql',
-    operatorAliases: false});
+    operatorsAliases: false});
 }
 
 fs
