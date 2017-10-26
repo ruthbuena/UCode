@@ -26,11 +26,13 @@
   padding: 0;
 }
 
-footer.page-footer.example.blue-grey.darken-1 {
+.footer-copyright {
   position: absolute;
   width: 100%;
   bottom: 0px;
+  background-color: #546e7a !important;
 }
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
