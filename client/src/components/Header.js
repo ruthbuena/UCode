@@ -1,8 +1,6 @@
 import React from 'react';
 import {Col, Row, Navbar, NavItem} from 'react-materialize';
 
-
-
 const Header = (props) =>
 
     <div>
@@ -20,6 +18,5 @@ const Header = (props) =>
             </Col>
         </Row>
     </div>
-
 
 export default Header;
