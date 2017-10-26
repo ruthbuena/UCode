@@ -3,6 +3,8 @@ import { Row, Input, Button} from 'react-materialize';
 import axios from 'axios';
 
 
+
+
 class Login extends React.Component {
 
     constructor(){
@@ -37,8 +39,9 @@ class Login extends React.Component {
             });
             console.log(response.data.email);
 
-            this.props.history.push( '/' );
-            this.props.onSuccess(response.email);
+            this.props.history.push( '/channels' );
+            this.props.onSuccessfulLogin();
+
         }).catch(response => {
             this.setState({
                 signinFail: true

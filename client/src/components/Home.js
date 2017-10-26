@@ -1,5 +1,5 @@
 import React from 'react';
-import Cards from './ChannelsM';
+import Welcome from './welcome';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -7,8 +7,8 @@ import Footer from './Footer';
 const Home = () =>
 
 	<div>
-    <Header />
-		<Cards />
+		<mainHeader />
+		<Welcome />
 		<Footer />
 	</div>
 
