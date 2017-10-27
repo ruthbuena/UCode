@@ -40,8 +40,10 @@ const models = require("./App/models");
 
 
 app.get('/', function(req, res) {
-    res.redirect('/login')
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+//     res.redirect('/login')
+// });
 
 app.post('/signup', passport.authenticate('local-signup'), function(req, res) {
     res.send(req.body);

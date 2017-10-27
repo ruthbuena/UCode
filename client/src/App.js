@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
+
 import BostonCode from './components/BostonCode/BostonCode';
 import LearnCode from './components/LearnCodeAcademy/LearnCodeAcademy';
 import Programming from './components/ProgrammingKnowledge/ProgrammingKnowledge';
@@ -13,13 +14,11 @@ import BradHussey from './components/BradHussey/BradHussey';
 import Home from './components/Home';
 import Login from './components/login';
 import Register from './components/signup';
-import Header from './components/Header';
 import Cards from './components/ChannelsM.js';
 
+
 class App extends React.Component {
-    state = {
-        authenticated: false
-    }
+    
 
     render(){
         return (
@@ -27,7 +26,6 @@ class App extends React.Component {
 
             <Router>
                 <div>
-                    <Header authenticated={this.state.authenticated} />
                         <Switch>
                             <Route exact path="/" component={Home}/>
 
