@@ -54,7 +54,7 @@ class Register extends React.Component {
 
         return (
             <div>
-                <Row className='container'>
+                <Row className='container signupBox'>
                     <Input
                         label="First Name" s={6}
                         type="text"

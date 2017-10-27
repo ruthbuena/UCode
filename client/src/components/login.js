@@ -51,8 +51,8 @@ class Login extends React.Component {
       render(){
           return(
 
-            <div className='container'>
-                <Row>
+            <div className='container loginBox'>
+                <Row className ="loginBox">
                     <Input
                         type="email"
                         label="Email" s={6}
