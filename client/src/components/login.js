@@ -30,7 +30,7 @@ class Login extends React.Component {
 
     signIn = () => {
         const {email, password} = this.state;
-        axios.post('/login', {
+        axios.post('/api/login', {
             email,
             password
         }).then(response => {

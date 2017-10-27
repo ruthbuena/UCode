@@ -28,7 +28,7 @@ class Register extends React.Component {
     SignUp = () => {
         const {firstname, lastname, email, password} = this.state;
 
-        axios.post('/signup', {
+        axios.post('/api/signup', {
             firstname,
             lastname,
             email,

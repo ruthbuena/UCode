@@ -42,17 +42,18 @@ const models = require("./App/models");
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-//     res.redirect('/login')
-// });
 
-app.post('/signup', passport.authenticate('local-signup'), function(req, res) {
+app.post('/api/signup', passport.authenticate('local-signup'), function(req, res) {
     res.send(req.body);
 });
 
-app.post('/login', passport.authenticate('local-signin'), function(req, res) {
+app.post('/api/login', passport.authenticate('local-signin'), function(req, res) {
     res.send(req.body);
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 require('./App/config/passport/passport.js')(passport,models.users);
 

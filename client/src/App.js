@@ -23,8 +23,6 @@ class App extends React.Component {
     render(){
         return (
 
-
-            <Router>
                 <div>
                     <Header authenticated={this.state.authenticated} />
                         <Switch>
@@ -50,7 +48,6 @@ class App extends React.Component {
                         </Switch>
 
                 </div>
-            </Router>
 
 
         )
