@@ -1,27 +1,15 @@
 import React from 'react';
 import Welcome from './welcome';
+
 import Header from './Header';
+import Footer from './Footer';
 
+const Home = () =>
 
-class Home extends React.Component {
-
-   state = {
-        authenticated: false
-    } 
-
-    render(){
-        return (
-
-		<div>
-			<Header authenticated={this.state.authenticated} />
-			<Welcome />
-
-		</div>
-
-        )
-
-    }
-}
-
+	<div>
+		<mainHeader />
+		<Welcome />
+		<Footer />
+	</div>
 
 export default Home;

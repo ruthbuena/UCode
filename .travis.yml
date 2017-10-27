@@ -3,4 +3,4 @@ language: node_js
 deploy:
   provider: heroku
   api_key: ...
-  app: my-app-123
+  app: rocky-caverns-52053
