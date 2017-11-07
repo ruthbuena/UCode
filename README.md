@@ -1,6 +1,6 @@
 # UCode
 
-The enclosed repository includes a video streaming application of the best coding resources built using Node, Express, React, MySQL and Passport for user authentication.
+The enclosed repository includes a video streaming application of the best coding resources built using Node, Express, React, MySQL and Passport.
 
 A demo of the application can be found at: https://rocky-caverns-52053.herokuapp.com/
 
@@ -11,7 +11,7 @@ Below are a few screen shots of the final application:
 Main Landing Page:
 ![main](App/views/main.png)
 
-Signup Page:
+Signup Page (Passport JS and JWT is used for user authentication):
 ![signup](App/views/signup.png)
 
 Login Page:
