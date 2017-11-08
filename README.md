@@ -1,6 +1,6 @@
 # UCode
 
-The enclosed repository includes a video streaming application of the best coding resources built using Node, Express, React, MySQL and Passport.
+The enclosed repository includes a video streaming application of the best coding resources built by (4) team members: Renzo Renteria, Lebeza Wendemsesha, Trent Mitchell and Ruth Buenaflor.  The application was built using React, React Router, Node, Express, MySQL, Sequelize, Bootstrap, Materialize and Passport.
 
 A demo of the application can be found at: https://rocky-caverns-52053.herokuapp.com/
 
